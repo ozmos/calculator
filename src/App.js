@@ -10,7 +10,7 @@ import formatString from './functions/formatString';
     [*]reverse order of numerical buttons
     [*]add backspace button
     [*]add modulus
-    []add square root
+    [*]add square root
     []link buttons to keyboard events
 */
 
@@ -20,15 +20,31 @@ class App extends React.Component {
     super(props);
     this.state = {
       input: '0',
-      result: ''
+      result: '',
     };
     this.handleClick = this.handleClick.bind(this);
     this.evaluate = this.evaluate.bind(this);
     this.upDateInput = this.upDateInput.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+
+  componentDidMount(){
+    document.addEventListener("keydown", this.handleKeyPress, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress, false);
   }
 
   handleClick(event) {
-    this.upDateInput(event.target.innerText);
+    this.upDateInput(event.target.innerHTML);
+  }
+
+  handleKeyPress(event) {
+    const keys = ["0", "9", "8", "7", "6", "5", "4", "3", "2", "1", ".", "C", "Backspace", "+", "-", "*", "/",  "%", "=", "Enter"];
+    if (keys.includes(event.key)) {
+      this.upDateInput(event.key);
+    } else return;
   }
 
   upDateInput(btn) {
@@ -80,7 +96,8 @@ class App extends React.Component {
           input: currentInput.concat(pressedBtn)
         });
         break;
-      case 'back':
+      case 'Backspace':
+      case '\u2190' :
         if (currentInput !== '0' && currentInput.length > 1) {
           this.setState({
             input: currentInput.slice(0, currentInput.length - 1)
@@ -97,6 +114,10 @@ class App extends React.Component {
           result: ''
         });
         break;
+      case '=':
+      case 'Enter':
+      this.evaluate();
+      break;
       default:
         currentInput === '0' ?
           this.setState({
@@ -106,13 +127,13 @@ class App extends React.Component {
             input: currentInput.concat(pressedBtn),
             result: ''
           });
-
+        console.log(btn);  
     }
 
   }
 
   evaluate() {
-    const result = /&radic/.test(this.state.input) 
+    const result = /\u221A/.test(this.state.input) //omit '0' from unicode U+0221A 
       ? calculateString(formatString(this.state.input))
       : calculateString(this.state.input);
     this.setState({
