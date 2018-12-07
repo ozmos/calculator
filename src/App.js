@@ -1,5 +1,10 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
+import './styles/Container.css';
+import './styles/Inputs.css'
+import './styles/variables.css';
+import './styles/gridAreas.css';
+import './styles/resets.css';
 import Container from './components/Container';
 import calculateString from './functions/calculateString';
 import formatString from './functions/formatString';
@@ -11,7 +16,7 @@ import formatString from './functions/formatString';
     [*]add backspace button
     [*]add modulus
     [*]add square root
-    []link buttons to keyboard events
+    [*]link buttons to keyboard events
 */
 
 

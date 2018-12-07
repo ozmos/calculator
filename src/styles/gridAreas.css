@@ -1,0 +1,71 @@
+.Clear {
+    grid-area: cl;
+}
+
+.Backspace {
+    grid-area: bs;
+}
+
+.square_root {
+    grid-area: sr;
+}
+
+.add {
+    grid-area: pl;
+}
+
+.subtract {
+    grid-area: mi;
+}
+
+.multiply {
+    grid-area: pr;
+}
+
+.modulus {
+    grid-area: mo;
+}
+
+.equals {
+    grid-area: eq;
+}
+
+.nine {
+    grid-area: ni;
+}
+
+.eight {
+    grid-area: ei;
+}
+
+.seven {
+    grid-area: se;
+}
+
+.six {
+    grid-area: si;
+}
+
+.five {
+    grid-area: fi;
+}
+
+.four {
+    grid-area: fo;
+}
+
+.three {
+    grid-area: th;
+}
+
+.two {
+    grid-area: tw;
+}
+
+.one {
+    grid-area: on;
+}
+
+.zero {
+    grid-area: ze;
+}

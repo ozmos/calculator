@@ -1,0 +1,10 @@
+.inputs {
+    display: grid;
+    grid-template-areas: "cl bs sr di" "se ei ni pr" "fo fi si mi" "on tw th pl" "de ze mo eq";
+}
+
+.button {
+    width: var(--button_size);
+    height: var(--button_size);
+    margin: 2px;
+}

@@ -1,0 +1,17 @@
+:root {
+    /*color schemes*/
+    --background_app: #1976D2;
+    --color_app: white;
+    --background_container: linear-gradient(#141E30, #243B55);
+    /*font families*/
+    --font_0: 'Righteous', cursive;
+    --font_1: 'Permanent Marker', cursive;
+    --font_2: 'Luckiest Guy', cursive;
+    --font_3: 'Spicy Rice', cursive;
+    /*sizes*/
+    --width_app: 100%;
+    --padding_app: 10px;
+    --padding_container: 10px;
+    --width_container: 420px;
+    --button_size: 90px;
+}
