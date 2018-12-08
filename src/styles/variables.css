@@ -1,17 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Kameron');
 :root {
     /*color schemes*/
-    --background_app: #1976D2;
+    --background_app: lightgrey;
     --color_app: white;
-    --background_container: linear-gradient(#141E30, #243B55);
+    --background_container: #d3560e;
+    --button_background: linear-gradient(#ff8000, #dd6f00);
+    --border_color: #a50;
+    --input_color: #121212;
+    --result_color: #020202;
+    --display_background: whitesmoke;
     /*font families*/
-    --font_0: 'Righteous', cursive;
-    --font_1: 'Permanent Marker', cursive;
-    --font_2: 'Luckiest Guy', cursive;
-    --font_3: 'Spicy Rice', cursive;
+    --font_primary: 'Kameron', serif;
     /*sizes*/
     --width_app: 100%;
-    --padding_app: 10px;
-    --padding_container: 10px;
-    --width_container: 420px;
-    --button_size: 90px;
+    --padding_app: 0px;
+    --padding_container: 0px;
+    --width_container: 400px;
+    --button_size: calc((375px/4) - calc(var(--button_margin) * 3));
+    --button_margin: 5px;
+    --display_width: calc((var(--button_size) * 4) + (var(--button_margin) * 5));
+    --display_height: 70px;
+    --display_padding: 5px;
+    --button_radius: 6px;
 }

@@ -1,0 +1,20 @@
+.display {
+    width: var(--display_width);
+    box-sizing: border-box;
+    padding: var(--display_padding);
+    text-align: right;
+    height: auto;
+    margin: auto;
+    background: var(--display_background);
+    border-radius: var(--button_radius);
+}
+
+.input_display {
+    color: var(--input_color);
+}
+
+.result {
+    color: var(--result_color);
+    font-size: 1.5rem;
+    line-height: 0.8;
+}

@@ -5,7 +5,10 @@ import './styles/Inputs.css'
 import './styles/variables.css';
 import './styles/gridAreas.css';
 import './styles/resets.css';
+import './styles/Display.css';
+import './styles/footer.css';
 import Container from './components/Container';
+import Footer from './components/Footer';
 import calculateString from './functions/calculateString';
 import formatString from './functions/formatString';
 /*
@@ -25,7 +28,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       input: '0',
-      result: '',
+      result: '0',
     };
     this.handleClick = this.handleClick.bind(this);
     this.evaluate = this.evaluate.bind(this);
@@ -59,7 +62,6 @@ class App extends React.Component {
       case '0':
         currentInput === '0' ?
           this.setState({
-            //change this
             input: '0'
           })
           : this.setState({
@@ -116,7 +118,7 @@ class App extends React.Component {
       case 'C':
         this.setState({
           input: '0',
-          result: ''
+          result: '0'
         });
         break;
       case '=':
@@ -130,7 +132,7 @@ class App extends React.Component {
           }) :
           this.setState({
             input: currentInput.concat(pressedBtn),
-            result: ''
+            result: this.state.result
           });
         console.log(btn);  
     }
@@ -144,6 +146,7 @@ class App extends React.Component {
     this.setState({
       result: result
     });
+    //TODO: refine this to only allow operators to concat result
     this.setState({
       input: result.toString()
     });
@@ -157,6 +160,7 @@ class App extends React.Component {
           result={this.state.result}
           handleClick={this.handleClick}
           evaluate={this.evaluate} />
+        <Footer author="Osamu Morozumi" />  
       </div>
     );
   }

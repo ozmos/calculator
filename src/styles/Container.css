@@ -6,4 +6,15 @@
     width: var(--width_container);
     max-width: 100%;
     margin: 10vmin auto;
+    padding: calc(var(--button_margin) * 4) 0;
+    border: 10px solid var(--border_color);
+    box-shadow: 2px 3px darkgrey;
+}
+
+@media (max-width: 420px) {
+    .container {
+        border-left: none;
+        border-right: none;
+        margin-top: 0;
+    }
 }

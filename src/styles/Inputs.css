@@ -1,10 +1,19 @@
 .inputs {
     display: grid;
     grid-template-areas: "cl bs sr di" "se ei ni pr" "fo fi si mi" "on tw th pl" "de ze mo eq";
+    margin: var(--button_margin) auto;
 }
 
 .button {
     width: var(--button_size);
     height: var(--button_size);
-    margin: 2px;
+    margin: var(--button_margin);
+    background: var(--button_background);
+    border: none;
+    border-radius: var(--button_radius);
+    color: var(--color_app);
+    font-size: 2rem;
+    text-shadow: 1px 1px var(--result_color);
+    font-family: var(--font_primary);
+    box-shadow: 1px 1px var(--border_color);
 }
