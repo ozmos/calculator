@@ -5,7 +5,7 @@
     padding: var(--padding_container);
     width: var(--width_container);
     max-width: 100%;
-    margin: 10vmin auto;
+    margin: 5vmin auto;
     padding: calc(var(--button_margin) * 4) 0;
     border: 10px solid var(--border_color);
     box-shadow: 2px 3px darkgrey;
