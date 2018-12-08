@@ -140,6 +140,7 @@ class App extends React.Component {
   }
 
   evaluate() {
+    console.log(this.state.input);
     const result = /\u221A/.test(this.state.input) //omit '0' from unicode U+0221A 
       ? calculateString(formatString(this.state.input))
       : calculateString(this.state.input);
